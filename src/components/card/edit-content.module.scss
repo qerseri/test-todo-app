@@ -1,0 +1,49 @@
+.editContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 300px;
+
+    h1 {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    &__inputContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        input {
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            border: 1px solid gray;
+
+            &:focus {
+                outline: 2px solid var(--primary-color);
+            }
+            &::placeholder {
+                color: lightgray;
+                font-size: 1rem;
+            }
+        }
+
+        textarea {
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            border: 1px solid gray;
+            resize: none;
+
+            &:focus {
+                outline: 1px solid var(--primary-color);
+            }
+            &::placeholder {
+                color: lightgray;
+                font-size: 1rem;
+            }
+        }
+    }
+}

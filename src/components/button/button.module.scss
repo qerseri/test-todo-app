@@ -6,6 +6,11 @@
     font-size: 1rem;
     font-weight: 500;
     transition: all 0.2s ease-in-out;
+
+    &--disabled {
+        background-color: gray !important;
+        cursor: not-allowed !important;
+    }
 }
 
 .primary {
