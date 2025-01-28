@@ -17,6 +17,11 @@ export const EditContent: React.FC<EditProps> = ({ todo, close }) => {
     const [canEdit, setCanEdit] = useState<boolean>(false);
 
     useEffect(() => {
+        if (!title) {
+            setCanEdit(false);
+            return;
+        }
+
         if (title !== todo.title) {
             setCanEdit(true);
             return;
