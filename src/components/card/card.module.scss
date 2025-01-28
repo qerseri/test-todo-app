@@ -1,0 +1,86 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    background-color: var(--gray-default-color);
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease-in-out;
+    user-select: none;
+
+    &--completed {
+        background-color: var(--gray-light-color);
+        text-decoration: line-through;
+    }
+
+    &:hover {
+        background-color: var(--gray-hover-color);
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        .leftSide {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+
+            input[type="checkbox"] {
+                cursor: pointer;
+                width: 16px;
+                height: 16px;
+                transition: all 0.1s ease-in-out;
+
+                &:hover {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+
+        .rightSide {
+            display: flex;
+            gap: 1rem;
+
+            &__icon {
+                width: 20px;
+                height: 20px;
+                transition: all 0.2s;
+                cursor: pointer;
+
+                &:hover {
+                    width: 23px;
+                    height: 23px;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        font-size: 1rem;
+
+        &--expanded {
+            -webkit-line-clamp: unset;
+            line-clamp: unset;
+            text-overflow: clip;
+        }
+    }
+}
+
+.deleteModalContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}

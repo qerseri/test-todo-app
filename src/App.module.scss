@@ -1,0 +1,44 @@
+@use "./styles/breakpoints" as *;
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__header {
+        background-color: var(--primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        height: 10rem;
+        width: 100%;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 2fr 0fr 1fr;
+        align-items: flex-start;
+        gap: 1rem;
+        margin: 2rem 0;
+        width: $lg;
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        hr {
+            border: 1px solid lightgray;
+            height: 100%;
+        }
+
+        .empty {
+            text-align: center;
+            margin-top: 25%;
+            font-size: 1.2rem;
+            color: gray;
+        }
+    }
+}

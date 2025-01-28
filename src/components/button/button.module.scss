@@ -1,0 +1,52 @@
+.button {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.primary {
+    background-color: var(--primary-color);
+
+    &:hover {
+        background-color: var(--primary-hover-color);
+    }
+
+    &:active {
+        background-color: var(--primary-pressed-color);
+    }
+}
+
+.secondary {
+    color: black;
+    background-color: var(--gray-default-color);
+
+    &:hover {
+        background-color: var(--gray-hover-color);
+    }
+
+    &:active {
+        background-color: var(--gray-pressed-color);
+    }
+}
+
+.red {
+    background-color: var(--red-default-color);
+
+    &:hover {
+        background-color: var(--red-hover-color);
+    }
+
+    &:active {
+        background-color: var(--red-pressed-color);
+    }
+}
+
+@media (hover: hover) {
+    .button {
+        cursor: pointer;
+    }
+}
