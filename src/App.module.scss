@@ -42,3 +42,29 @@
         }
     }
 }
+
+@media only screen and (max-width: ($lg + 32px)) {
+    .main {
+        &__content {
+            width: $md;
+        }
+    }
+}
+
+@media only screen and (max-width: ($md + 32px)) {
+    .main {
+        &__header {
+            height: 6rem;
+        }
+        &__content {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            width: 100%;
+
+            .cards {
+                width: calc(100% - 2rem);
+            }
+        }
+    }
+}

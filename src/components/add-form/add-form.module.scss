@@ -1,3 +1,5 @@
+@use "../../styles/breakpoints" as *;
+
 .form {
     background-color: var(--secondary-color);
     border-radius: 12px;
@@ -41,5 +43,29 @@
                 font-size: 1rem;
             }
         }
+    }
+}
+
+@media only screen and (max-width: ($lg + 32px)) {
+    .form {
+        &__inputContainer {
+            font-size: 0.75rem;
+
+            input,
+            textarea {
+                font-size: 0.75rem;
+
+                &::placeholder {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: ($md + 32px)) {
+    .form {
+        width: 100%;
+        border-radius: 0px;
     }
 }
